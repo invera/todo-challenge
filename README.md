@@ -1,35 +1,58 @@
-# Invera ToDo-List Challenge (Python/Django Jr-SSr)
+# Task Manager web service
 
-El propósito de esta prueba es conocer tu capacidad para crear una pequeña aplicación funcional en un límite de tiempo. A continuación, encontrarás las funciones, los requisitos y los puntos clave que debés tener en cuenta durante el desarrollo.
+- Esta aplicación permite a los usuarios llevar a cabo la gestión y mantenimiento de listas de tareas, o sea que permite crear y eliminar tareas, permite mostrar todas las tareas o una en particular, permite poder modificar sus datos y además cambiar su estado pudiendo tomar uno de los siguientes: Activa, Finalizada o Cancelada. 
+- Ademas permite que se realicen busquedas y filtrados mediante fecha de creación y/o contenido de la misma según título o descripción.
 
-## Qué queremos que hagas:
 
-- El Challenge consiste en crear una aplicación web sencilla que permita a los usuarios crear y mantener una lista de tareas.
-- La entrega del resultado será en un nuevo fork de este repo y deberás hacer una pequeña demo del funcionamiento y desarrollo del proyecto ante un super comité de las más grandes mentes maestras de Invera, o a un par de devs, lo que sea más fácil de conseguir.
-- Podes contactarnos en caso que tengas alguna consulta.
 
-## Objetivos:
+## Requerimientos:
 
-El usuario de la aplicación tiene que ser capaz de:
+- Python 3.7
+- Django 3.1.5
+- django-filter 2.4.0
+- djangorestframework 3.11.1
+- djangorestframework-timed-auth-token 1.3.0
+- psycopg2-binary 2.8
+- Docker y docker-compose
 
-- Crear una tarea
-- Eliminar una tarea
-- Marcar tareas como completadas
-- Poder ver una lista de todas las tareas existentes
-- Filtrar/buscar tareas por fecha de creación y/o por el contenido de la misma
 
-## Qué evaluamos:
 
-- Desarrollo utilizando Python, Django. No es necesario crear un Front-End, pero sí es necesario tener una API que permita cumplir con los objetivos de arriba.
-- Calidad y arquitectura de código. Facilidad de lectura y mantenimiento del código. Estándares seguidos.
-- [Bonus] Manejo de logs.
-- [Bonus] Creación de tests (unitarias y de integración)
-- [Bonus] Unificar la solución propuesta en una imagen de Docker por repositorio para poder ser ejecutada en cualquier ambiente (si aplica para full stack).
+## Instalación y uso:
 
-## Requerimientos de entrega:
+Para poder correr el proyecto es necesario seguir los siguientes pasos:
 
-- Hacer un fork del proyecto y pushearlo en github. Puede ser privado.
-- La solución debe correr correctamente.
-- El Readme debe contener todas las instrucciones para poder levantar la aplicación, en caso de ser necesario, y explicar cómo se usa.
-- Disponibilidad para realizar una pequeña demo del proyecto al finalizar el challenge.
-- Tiempo para la entrega: Aproximadamente 7 días.
+- Crear un repositorio en donde alojar el proyecto
+- Teniendo instalado Docker y docker-compose ejecutar docker-compose up --build
+- Clonar el repositorio a una carpeta de proyectos local.
+- Pararse en la rama "master".
+- Migrar la base de datos: docker-compose run web python manage.py migrate
+- Crear un usuario superuser el cual nos va a permitir poder gestionar las tareas. Para crearlo usar la instrucción: docker-compose run web python manage.py createsuperuser 
+- Correr el servior local mediante: docker-compose up
+- Importar la colección de postman que se encuentra en la carpeta "postman" para poder correr los endpoints.
+- Obtener token del superuser mediante el request que se encuentra en Postman en Account/Account Token. Previamente cambiar los datos de usuario y password por los del usuario recientemente creado.
+- En la carpeta "Tarea" de Postman se encuentran todos los requests necesarios para el llamado a los endpoints correspondientes a Tareas. 
+
+
+## Endpoints:
+
+Todos los endpoint para la gestión de tareas requiere autenticación.
+
+- Crear Token - POST - /api/v1/user/auth/login/
+- Crear Tarea - POST - /api/v1/tareas/
+- Listar todas las tareas - GET - /api/v1/tareas/
+- Listar Tarea por Guid - POST - /api/v1/tareas/[guid]
+- Modificación total de Tarea - PUT - /api/v1/tareas/[guid]
+- Modificación parcial de Tarea- PATCH - /api/v1/tareas/[guid]
+- Eliminar Tarea - DELETE - /api/v1/tareas/[guid]
+- Buscar Tarea por rango de fechas de creación - GET - /api/v1/tareas/search/[YYYY-MM-DD]/[YYYY-MM-DD]
+- Buscar Tarea por texto en Título o Descripción - GET - /api/v1/tareas/search/[TEXT]
+- Buscar Tarea por rango de fechas de creación y por texto en Título o Descripción- GET - /api/v1/tareas/search/[YYYY-MM-DD]/[YYYY-MM-DD]/[TEXT]
+
+
+## Test:
+
+Esta aplicación contiene un set de pruebas unitarias fundamentalmente para testear los endpoints para la gestión de tareas. Para poder realizar el test correr la siguiente instrucción:
+
+- docker-compose run web python manage.py test
+
+
