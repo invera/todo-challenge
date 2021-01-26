@@ -1,0 +1,106 @@
+[25/Jan/2021 22:34:37] DEBUG [views.py][get_queryset][32][tarea-debug] {}
+[25/Jan/2021 22:34:37] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
+[25/Jan/2021 22:35:07] DEBUG [views.py][get_queryset][32][tarea-debug] {}
+[25/Jan/2021 22:35:07] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
+[25/Jan/2021 22:35:14] DEBUG [views.py][get_queryset][32][tarea-debug] {'guid': '8e39b0c37180c069fbd457b904786a20ac042805b890367c396caf43d8ab6bd3'}
+[25/Jan/2021 22:35:14] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
+[25/Jan/2021 22:35:19] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-23', 'dateTo': '2021-01-25', 'text': 'fun'}
+[25/Jan/2021 22:35:19] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:35:19] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:19] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:19] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-23
+[25/Jan/2021 22:35:19] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-25
+[25/Jan/2021 22:35:19] DEBUG [views.py][get_queryset][61][tarea-debug] text: fun
+[25/Jan/2021 22:35:19] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-23 00:00:00
+[25/Jan/2021 22:35:19] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-25 23:59:59
+[25/Jan/2021 22:35:23] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-23', 'dateTo': '2021-01-25', 'text': 'mar'}
+[25/Jan/2021 22:35:23] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:35:23] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:23] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:23] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-23
+[25/Jan/2021 22:35:23] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-25
+[25/Jan/2021 22:35:23] DEBUG [views.py][get_queryset][61][tarea-debug] text: mar
+[25/Jan/2021 22:35:23] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-23 00:00:00
+[25/Jan/2021 22:35:23] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-25 23:59:59
+[25/Jan/2021 22:35:28] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-23', 'dateTo': '2021-01-25', 'text': 'use'}
+[25/Jan/2021 22:35:28] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:35:28] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:28] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:28] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-23
+[25/Jan/2021 22:35:28] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-25
+[25/Jan/2021 22:35:28] DEBUG [views.py][get_queryset][61][tarea-debug] text: use
+[25/Jan/2021 22:35:28] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-23 00:00:00
+[25/Jan/2021 22:35:28] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-25 23:59:59
+[25/Jan/2021 22:35:32] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-23', 'dateTo': '2021-01-25', 'text': 'tab'}
+[25/Jan/2021 22:35:32] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:35:32] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:32] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:35:32] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-23
+[25/Jan/2021 22:35:32] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-25
+[25/Jan/2021 22:35:32] DEBUG [views.py][get_queryset][61][tarea-debug] text: tab
+[25/Jan/2021 22:35:32] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-23 00:00:00
+[25/Jan/2021 22:35:32] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-25 23:59:59
+[25/Jan/2021 22:36:44] DEBUG [views.py][get_queryset][32][tarea-debug] {'guid': 'cd46f001a875326f1ada296bd622adf3c512a579f2996d1b7baaf3747da452f3'}
+[25/Jan/2021 22:36:44] DEBUG [views.py][get_queryset][35][tarea-debug] queryset for delete
+[25/Jan/2021 22:36:44] DEBUG [views.py][destroy][94][tarea-debug] Status != 3
+[25/Jan/2021 22:36:44] DEBUG [views.py][get_queryset][32][tarea-debug] {}
+[25/Jan/2021 22:36:44] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
+[25/Jan/2021 22:36:44] DEBUG [views.py][get_queryset][32][tarea-debug] {'guid': 'cd46f001a875326f1ada296bd622adf3c512a579f2996d1b7baaf3747da452f3'}
+[25/Jan/2021 22:36:44] DEBUG [views.py][get_queryset][35][tarea-debug] queryset for delete
+[25/Jan/2021 22:36:44] DEBUG [views.py][destroy][100][tarea-debug] Status = 3
+[25/Jan/2021 22:36:45] DEBUG [views.py][get_queryset][32][tarea-debug] {}
+[25/Jan/2021 22:36:45] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
+[25/Jan/2021 22:36:45] DEBUG [tests.py][test_getAll_task][107][tarea-debug] 2
+[25/Jan/2021 22:36:46] DEBUG [views.py][get_queryset][32][tarea-debug] {'guid': 'f25d1e049630bf39d5a4bf6269484b61c63714c8db67c019a3270c9a5edc7ecf'}
+[25/Jan/2021 22:36:46] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][32][tarea-debug] {'text': 'seg'}
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][61][tarea-debug] text: seg
+[25/Jan/2021 22:36:47] DEBUG [tests.py][test_search_task_range_date][181][tarea-debug] url: /api/v1/tareas/search/2021-01-18/2021-01-25/
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-18', 'dateTo': '2021-01-25'}
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:36:47] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:47] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-18
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-25
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][61][tarea-debug] text: 
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-18 00:00:00
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-25 23:59:59
+[25/Jan/2021 22:36:47] DEBUG [tests.py][test_search_task_range_date][186][tarea-debug] response.data['count']: 2
+[25/Jan/2021 22:36:47] DEBUG [tests.py][test_search_task_range_date_2][202][tarea-debug] url: /api/v1/tareas/search/2021-01-25/2021-01-25/
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-25', 'dateTo': '2021-01-25'}
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:36:47] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:47] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-25
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-25
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][61][tarea-debug] text: 
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-25 00:00:00
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-25 23:59:59
+[25/Jan/2021 22:36:47] DEBUG [tests.py][test_search_task_range_date_2][207][tarea-debug] created_date: 2021-01-25 22:36:47.638157+00:00
+[25/Jan/2021 22:36:47] DEBUG [tests.py][test_search_task_range_date_3][222][tarea-debug] url: /api/v1/tareas/search/2021-01-26/2021-01-27/
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-26', 'dateTo': '2021-01-27'}
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:36:47] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:47] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-26
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-27
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][61][tarea-debug] text: 
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-26 00:00:00
+[25/Jan/2021 22:36:47] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-27 23:59:59
+[25/Jan/2021 22:36:48] DEBUG [tests.py][test_search_task_range_date_and_text][252][tarea-debug] url: /api/v1/tareas/search/2021-01-18/2021-01-24/pri
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][32][tarea-debug] {'dateFrom': '2021-01-18', 'dateTo': '2021-01-24', 'text': 'pri'}
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][40][tarea-debug] queryset for Search Tareas
+[25/Jan/2021 22:36:48] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:48] DEBUG [views.py][dateFormatControl][109][tarea-debug] ok format date
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][59][tarea-debug] dateFrom: 2021-01-18
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][60][tarea-debug] dateTo: 2021-01-24
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][61][tarea-debug] text: pri
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][69][tarea-debug] dtDateFrom: 2021-01-18 00:00:00
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][70][tarea-debug] dtDateTo: 2021-01-24 23:59:59
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][32][tarea-debug] {'guid': 'c0a08a640ce3ac233d7870df3d6f63360f656394d2fa4b509e36884cbce79594'}
+[25/Jan/2021 22:36:48] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
+[25/Jan/2021 22:56:34] DEBUG [views.py][get_queryset][32][tarea-debug] {}
+[25/Jan/2021 22:56:34] DEBUG [views.py][get_queryset][84][tarea-debug] generic queryset
