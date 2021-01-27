@@ -1,0 +1,63 @@
+[25/Jan/2021 22:31:52] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:34:31] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:34:37] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:35:03] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:35:07] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:35:14] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:35:19] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:35:23] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:35:28] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:35:32] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:44] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:44] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:44] INFO [views.py][destroy][90][tarea-info] Destroy
+[25/Jan/2021 22:36:44] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:44] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:44] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:44] INFO [views.py][destroy][90][tarea-info] Destroy
+[25/Jan/2021 22:36:44] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:44] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:44] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:45] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:46] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:47] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [views.py][get_queryset][30][tarea-info] get_queryset
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:36:48] INFO [models.py][save][26][tarea-info] Save task
+[25/Jan/2021 22:56:34] INFO [views.py][get_queryset][30][tarea-info] get_queryset

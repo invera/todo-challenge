@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "f20543a8-bde7-4f4d-b5dc-ac7d738c59f9",
+		"name": "Task Managment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Account Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6bba8d4a-762b-4202-99e0-05246fc07d28",
+								"exec": [
+									"var body = pm.response.json();",
+									"console.log(\"body: \", body);",
+									"",
+									"pm.test('token is valid', function () {",
+									"",
+									"    //Extract user token",
+									"    var token = body.token",
+									"    pm.expect(token).to.be.string;",
+									"    // Set new User token",
+									"    pm.environment.set(\"TOKEN\", \"Token \" + token);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\" : \"\",\n  \"password\" : \"\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/auth/login/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tarea",
+			"item": [
+				{
+					"name": "Tarea - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\" : \"Crear tabla Marca en base de datos\",\r\n  \"description\" : \"Por favor crear la tabla Marca en la base de datos del sistema\"\r\n }",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tareas/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarea - Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\" : \"Titulo de tarea 3\",\r\n  \"description\" : \"Se crea la tarea 3\",\r\n  \"_status\" : 1\r\n }",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tareas/aa931a91d177807678f6347e5a155d0c2dfabc0bc149deaf817583c6dd32e905/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								"aa931a91d177807678f6347e5a155d0c2dfabc0bc149deaf817583c6dd32e905",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarea - Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"_title\" : \"Titulo 2\",\r\n  \"description\" : \"Hacer un endpoint que sirva para hacer busquedas de tareas.\",\r\n  \"status\" : 1\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tareas/a77fbf9a2cbc59c48ee35433eeaae9c414260660b1c5546465225b1e650f1ee5/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								"a77fbf9a2cbc59c48ee35433eeaae9c414260660b1c5546465225b1e650f1ee5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarea - Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/tareas/8e39b0c37180c069fbd457b904786a20ac042805b890367c396caf43d8ab6bd3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								"8e39b0c37180c069fbd457b904786a20ac042805b890367c396caf43d8ab6bd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarea - Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token 8edbcd54eee55af0d5185e35ce4ce668f5cb531c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/tareas/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarea - Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/tareas/?search=cre",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "cre"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarea - Search 2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/tareas/search/2021-01-23/2021-01-25/tab",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								"search",
+								"2021-01-23",
+								"2021-01-25",
+								"tab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarea - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tareas/b200b9ed154454815adb1704acba820592ea53811cd8530f7dedd75ddaf24737/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tareas",
+								"b200b9ed154454815adb1704acba820592ea53811cd8530f7dedd75ddaf24737",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
