@@ -18,15 +18,9 @@ USE_TZ = True
 
 # DATABASES
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "todo",
-        'USER': 'todo',
-        'PASSWORD': '1234',
-        'HOST': 'postgres',
-        'PORT': '5432',
-    },
+    'default': env.db('DATABASE_URL'),
 }
+
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 # URLs
