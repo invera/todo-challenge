@@ -38,8 +38,8 @@ El usuario de la aplicación tiene que ser capaz de:
 ## Solución
 
 - Clonar el proyecto
-- ### ´docker-compose build´
-- ### ´docker-compose run --rm challenge python manage.py createsuperuser´
-- ### ´docker-compose run´
+- ### docker-compose build
+- ### docker-compose run --rm challenge python manage.py createsuperuser
+- ### docker-compose up
 - Para correr los tests:
-    ### ´docker-compose run --rm python manage.py test´
+    ### docker-compose run --rm python manage.py test
