@@ -53,7 +53,7 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'todo.users.apps.UsersAppConfig',
-    # 'todo.management.apps.ManagementAppConfig',
+    'todo.management.apps.ManagementAppConfig',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
