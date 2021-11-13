@@ -1,7 +1,7 @@
-# Base
+# Base API
 pytz==2018.7
 python-slugify==1.2.6
-Pillow==6.2.2
+Pillow==8.2.0
 psycopg2==2.7.4 --no-binary psycopg2
 
 # Django
@@ -13,7 +13,7 @@ django-environ==0.4.5
 
 # Django REST Framework
 djangorestframework==3.12.1
-django-filter==2.0.0
+django-filter==2.4.0
 
 # PyJWT
 pyjwt==1.7.1
@@ -22,7 +22,10 @@ pyjwt==1.7.1
 argon2-cffi==20.1.0
 
 # Static files
-whitenoise==4.1.2
+whitenoise==5.2.0
+
+# PyEasyToken
+djangorestframework-simplejwt==4.4.0
 
 # Celery
 redis==3.2.0
