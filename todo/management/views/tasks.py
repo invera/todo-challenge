@@ -22,7 +22,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
     # Filters
     filter_backends = (SearchFilter, OrderingFilter, DjangoFilterBackend)
-    search_fields = ('title', 'date_to_finish', 'is_finalize', 'description', 'created')
+    search_fields = ('title', 'date_to_finish', 'is_finalize', 'description')
     ordering_fields = ('title', 'date_to_finish', 'is_finalize', 'description', 'priority', 'color')
     ordering = ()
     filterset_fields = ('title', 'date_to_finish', 'is_finalize', 'description', 'created', 'priority', 'color')

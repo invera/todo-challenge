@@ -35,6 +35,8 @@ class TaskModelSerializer(serializers.ModelSerializer):
         # Sacamos los datos que ya tenemos en el context
         user = self.context['request'].user
 
+        data['is_finalize'] = False
+
         # Creamos la tarea
         task = Task.objects.create(
             user=user,
