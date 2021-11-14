@@ -22,8 +22,7 @@ class ProfileModelSerializer(serializers.ModelSerializer):
         )
 
         read_only_fields = (
-            'points', 'id',
-            'tasks_finalized', 'tasks_pending',
+            'id', 'tasks_finalize', 'tasks_pending',
             'tasks_created'
         )
 

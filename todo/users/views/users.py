@@ -30,7 +30,6 @@ from todo.users.models import User, Profile
 
 
 class UserViewSet(mixins.RetrieveModelMixin,
-                  mixins.ListModelMixin,
                   mixins.UpdateModelMixin,
                   mixins.DestroyModelMixin,
                   viewsets.GenericViewSet):
