@@ -12,4 +12,3 @@ class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     filter_backends = [filters.SearchFilter]
     search_fields = ['Job', 'Date']
-    ordering_fields = ['Job', 'Date']
