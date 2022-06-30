@@ -29,12 +29,6 @@ class TestListTask(APITestCase):
                 "Date": "06-30-2022",
                 "Done": 0
             },
-            # {
-            #     "Job": "Read Database",
-            #     "Auto_Date": "2022-07-01T06:31:40.408833Z",
-            #     "Date": "07-01-2022",
-            #     "Done": 0
-            # },
         ]
 
         cls.tasks = [Task.objects.create(**item) for item in setup]
