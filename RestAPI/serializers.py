@@ -5,4 +5,5 @@ from .models import Task
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Task
-        fields = ['Job', 'Auto_Date', 'Date', 'Done']
+        id = serializers.ReadOnlyField()
+        fields = ['id', 'Job', 'Auto_Date', 'Date', 'Done']

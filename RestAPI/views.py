@@ -9,6 +9,6 @@ from .models import Task
 
 class TaskViewSet(viewsets.ModelViewSet):
     serializer_class = TaskSerializer
-    queryset = Task.objects.all()
+    queryset = Task.objects.all().order_by('id')
     filter_backends = [filters.SearchFilter]
     search_fields = ['Job', 'Date']
