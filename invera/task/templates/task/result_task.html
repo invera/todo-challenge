@@ -1,0 +1,30 @@
+{% extends 'home/home.html' %}
+    {% block taskss %}
+    <br><br>
+    {% if request.user.is_staff %}
+    <p> HOLA</p>
+    {% endif %}
+    <a href='{% url "SearchTask" %}'>Buscar Task </a> &emsp;
+    {% if task %}
+        <p>Busqueda: {{ nombre }} </p>
+        <p>results according to name and date</p>
+        <p>Task : {{task|length}} </p>
+        
+                {% for tasky in task %}
+              
+                    <li> <strong>Author: </strong>{{tasky.author}} &nbsp;
+                        <strong>Name Task: </strong> {{tasky.name_task}} &nbsp;
+                        <strong>Date: </strong> {{tasky.date}} &nbsp;
+                        <strong>Completed: </strong> {{tasky.completed}}    
+
+                        <a href='{% url "TaskDetail" tasky.id %}'> Detalles </a> &nbsp;--></li>
+                        <br>
+                
+                {% endfor %}
+    {% else %}
+        <p> no tasks found with name: {{nombre}} </p>
+    {% endif %}
+        <br><br>
+    {% endblock taskss %}
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends 'home/home.html' %}
+
+
+{% block taskss %}
+        <p>TASKKK</p>
+        
+
+        
+        {% if tasks %}
+            
+        
+        <h2>Find Task</h2>
+    
+        <a href=" {% url 'SearchTask' %}"> Search Task</a>
+        <p>ESTAS SON TUS TAREAS</p>
+
+
+            {% for task in tasks %}
+                <li> 
+                    <ul>
+                        Task Name = {{task.name_task}} || Date = {{task.date}}
+                    </ul> 
+                    
+                </li>
+                
+            {% endfor %}
+
+            
+            {% if msg %}
+
+            
+              <strong>{{msg}}</strong>  
+                
+
+            {% endif %}
+                
+        
+        
+        {% else %}
+        <p> NO hay tareas </p>
+        {% endif %}
+            
+
+        
+
+
+        
+            
+        
+    
+        
+{% endblock taskss %}

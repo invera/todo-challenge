@@ -35,3 +35,6 @@ El usuario de la aplicación tiene que ser capaz de:
 - El Readme debe contener todas las instrucciones para poder levantar la aplicación, en caso de ser necesario, y explicar cómo se usa.
 - Disponibilidad para realizar una pequeña demo del proyecto al finalizar el challenge.
 - Tiempo para la entrega: Aproximadamente 7 días.
+
+
+##

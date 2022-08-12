@@ -1,0 +1,36 @@
+{% extends 'home/home.html' %}
+
+
+{% block taskss %}
+
+<h2>Find Task</h2>
+        <form method="GET">
+
+            <input type="text" name = "name"> 
+            <button type="submit" value="BUSCAR">Buscar</button>
+
+        </form>
+
+        <br><br>
+        
+        <a href='{% url "SearchTask" %}'>Buscar Task </a> &emsp;
+
+        {% if task %}
+        <p>Busqueda: {{ nombre }} </p>
+        <p>results according to name and date</p>
+        <p>Task : {{task|length}} </p>
+        
+                {% for tasky in task %}
+              
+                    <li> {{tasky}} <!--  <a href='{% url "TaskDetail" tasky.id %}'> Detalles </a> &nbsp;--></li>
+                
+
+                {% endfor %}
+
+        {% else %}
+        <p>Busqueda: {{ nombre }} </p>
+            <p> no tasks found with name: {{nombre}} </p>
+        {% endif %}
+            <br><br>
+    
+{% endblock taskss %}

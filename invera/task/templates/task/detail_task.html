@@ -1,0 +1,14 @@
+{% extends 'home/home.html' %}
+
+    {% block taskss %}
+        <br><br>
+        <h4>Task: {{object.name_task}}</h4>
+        
+        <p>Date: {{object.date}} </p> 
+        <p>Author: {{object.author}} </p>
+        <p>Completed: {{object.completed}} </p>
+
+        <br><br>
+        <a href='{% url "Home" %}'> Regresar </a>
+
+    {% endblock taskss %}
