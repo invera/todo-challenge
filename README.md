@@ -1,40 +1,205 @@
-# Invera ToDo-List Challenge (Python/Django Jr-SSr)
+##### ¡IMPORTANTE! #####
+\\\\\\\\\\\\\\\\\\\\\\\\
 
-El propósito de esta prueba es conocer tu capacidad para crear una pequeña aplicación funcional en un límite de tiempo. A continuación, encontrarás las funciones, los requisitos y los puntos clave que debés tener en cuenta durante el desarrollo.
+Usuario = lucas
+Contraseña= 1234
+Token = ced0f281226d8c169a7e7950910f402ebb102062
 
-## Qué queremos que hagas:
+\\\\\\\\\\\\\\\\\\\\\\\\\
+Los campos de los JSON 
+"author(user)"
+"email(user)"
 
-- El Challenge consiste en crear una aplicación web sencilla que permita a los usuarios crear y mantener una lista de tareas.
-- La entrega del resultado será en un nuevo fork de este repo y deberás hacer una pequeña demo del funcionamiento y desarrollo del proyecto ante un super comité de las más grandes mentes maestras de Invera, o a un par de devs, lo que sea más fácil de conseguir.
-- Podes contactarnos en caso que tengas alguna consulta.
+representan informacion especificada del User, se realizaron con una función toJson en el modelo
 
-## Objetivos:
+\\\\\\\\\\\\\\\\\\\\\\\\\
 
-El usuario de la aplicación tiene que ser capaz de:
+|Header          |Value
+|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
 
-- Autenticarse
-- Crear una tarea
-- Eliminar una tarea
-- Marcar tareas como completadas
-- Poder ver una lista de todas las tareas existentes
-- Filtrar/buscar tareas por fecha de creación y/o por el contenido de la misma
+\\\\\\\\\\\\\\\\\\\\\\\\\
 
-## Qué evaluamos:
+La paginación de los registros es de 15, podes modificarla en ../invera/settings.py 
+desplazarte hasta el apartado 
+REST_FRAMEWORK
+y cambiar el 15 por los valores que quieras.
+'PAGE_SIZE': 15,
 
-- Desarrollo utilizando Python, Django. No es necesario crear un Front-End, pero sí es necesario tener una API que permita cumplir con los objetivos de arriba.
-- Uso de librerías y paquetes estandares que reduzcan la cantidad de código propio añadido.
-- Calidad y arquitectura de código. Facilidad de lectura y mantenimiento del código. Estándares seguidos.
-- [Bonus] Manejo de logs.
-- [Bonus] Creación de tests (unitarias y de integración)
-- [Bonus] Unificar la solución propuesta en una imagen de Docker por repositorio para poder ser ejecutada en cualquier ambiente (si aplica para full stack).
-
-## Requerimientos de entrega:
-
-- Hacer un fork del proyecto y pushearlo en github. Puede ser privado.
-- La solución debe correr correctamente.
-- El Readme debe contener todas las instrucciones para poder levantar la aplicación, en caso de ser necesario, y explicar cómo se usa.
-- Disponibilidad para realizar una pequeña demo del proyecto al finalizar el challenge.
-- Tiempo para la entrega: Aproximadamente 7 días.
+\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
-##
+#####
+
+
+#####
+
+
+#####
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##### GET de archivos(Postman)
+
+Para ver todos los registros desde terminal con la libreria https(instalada en el entorno)
+
+>>> https http://127.0.0.1:8000/api/tasks/ "Authorization: Token ced0f281226d8c169a7e7950910f402ebb102062"
+
+
+O podemos hacerlo desde Postman, poniendo en los Headers 
+
+|Header          |Value
+|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+
+y en la peticion
+
+http://127.0.0.1:8000/api/tasks/  | METHOD= GET
+
+Para ver los registros con las tareas completas:
+
+http://127.0.0.1:8000/api/task/completedlist/ | METHOD= GET
+
+Para ver los usuarios:
+
+http://127.0.0.1:8000/api/userlist/
+
+#####
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##### Post de archivos(Postman)
+ 
+|Header          |Value
+|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+
+
+http://127.0.0.1:8000/api/tasks/  | METHOD= POST
+
+Form Fields
+
+|Field name      |Value
+author		 <* pk_User:int > 
+name_task	 <texto de ejemplo>
+completed        true/false
+
+* pk_User= La primarykey de User es el valor autoasignado por cada registro de usuario en la base de datos, podemos verla a traves de DBrowser:
+-auth_user
+y se encuentra con un nombre "id", siempre es de caracter int.
+
+
+Los demás campos se autocompletaran solos con la información del usuario y en el caso de la fecha, tomara la actual al momento de ejecutar la petición.
+
+Form example
+http://127.0.0.1:8000/api/tasks/ | METHOD= POST
+
+|Field name      |Value
+author		      1 
+name_task	     Post con postman
+completed        true
+
+
+y obtendriamos un JSON como este:
+
+{
+    "id": 15,
+    "author": 2,
+    "name_task": "post prueba postman",
+    "completed": true,
+    "author(user)": "messi",
+    "email(user)": "",
+    "date_task": "2022-08-12T13:49:32.774752Z"
+}
+
+
+
+
+#####
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##### PUT de archivos(Postman)
+
+
+|Header          |Value
+|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+
+Pasamos la siguiente URL especificando la pk de la tarea, este caracter es siempre un int.
+
+http://127.0.0.1:8000/api/tasks/<pk_task:int>/  | METHOD= PUT
+
+Form Fields
+
+|Field name      |Value
+author		 <* pk_User:int > 
+name_task	 <texto de ejemplo>
+completed        true/false
+
+
+* pk_User= La primarykey de User es el valor autoasignado por cada registro de usuario en la base de datos, podemos verla a traves de DBrowser:
+-auth_user
+y se encuentra con un nombre "id", siempre es de caracter int.
+
+
+Los demás campos se autocompletaran solos con la información del usuario y en el caso de la fecha, tomara la actual al momento de ejecutar la petición.
+
+
+Form example
+http://127.0.0.1:8000/api/tasks/7/             | METHOD= PUT
+
+|Field name      |Value
+author		 3 
+name_task	 Put con postman
+completed        true
+
+
+y obtendriamos un JSON como este:
+
+{
+    "id": 7,
+    "author": 3,
+    "name_task": "post prueba postman PUT",
+    "completed": true,
+    "author(user)": "cristianoronaldo",
+    "email(user)": "cristianoronaldo@gmail.com",
+    "date_task": "2022-08-12T04:52:07.683125Z"
+}
+
+
+
+#####
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##### DELETE de archivos(Postman)
+
+Header          |Value
+|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+
+Pasamos la siguiente URL especificando la pk de la tarea, este caracter es siempre un int.
+
+http://127.0.0.1:8000/api/tasks/<pk_task:int>/  | METHOD= DELETE
+
+
+
+Form example
+http://127.0.0.1:8000/api/tasks/13/ | METHOD= DELETE
+
+
+
+y no obtendriamos un JSON porque los campos se borraron :(, pero efectivamente el registro es historia.
+
+
+
+#####
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##### LOGS
+
+Para visualizar los logs lo haremos dentro del admin
+
+
+http://127.0.0.1:8000/admin/drf_api_logger/apilogsmodel/
+
+Iniciando sesión con 
+Usuario = lucas
+Contraseña= 1234
+
+
+Para ver la aplicacion fronted
+
+http://127.0.0.1:8000
