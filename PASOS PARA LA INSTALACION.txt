@@ -1,0 +1,30 @@
+Abrir git bash en la carpeta seleccionada y poner la siguiente linea:
+
+>>>git clone https://github.com/LucasMigliaccio/todo-challenge.git
+
+Luego de abrir el proyecto en VSCO, presionar F1 e ir a la opción "Python seleccionar interprete" y seleccionar la opción "(env)", después posicionarse en la carpeta "todo-challenge" desde una terminal(preferiblemente VSCO):
+
+>>> .env\Scripts\activate
+
+E instalamos todos los requerimientos del entorno con 
+
+>>> pip3 install -r requirements.txt
+
+
+Y por ultimo nos posicionamos en invera:
+
+
+>>> cd invera
+
+y colocamos 
+
+
+>>> py manage.py runserver
+
+¡Listo!
+
+Ya tenemos nuestro proyecto corriendo en nuestro localhost
+podes acceder a el copiando al navegador la siguiente URL:
+
+http://127.0.0.1:8000/
+
