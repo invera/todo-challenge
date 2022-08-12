@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.authtoken import views
-from api.views import Login
+from api.views import Login, Logout
 #from task.api.router import router_task
 
 urlpatterns = [
@@ -26,7 +26,9 @@ urlpatterns = [
 
     path('api/', include(('api.urls','api'))),
     path('api_authorization/', include('rest_framework.urls')),
-    #path('login/', Login.as_view(),name='login'),
+    path('login/', Login.as_view(),name='login'),
+    path('logout/', Logout.as_view()),
+
     #Obtener token, solo POST
-    path('api-token-auth/', views.obtain_auth_token),
+    path('api_generate_token/', views.obtain_auth_token),
 ]

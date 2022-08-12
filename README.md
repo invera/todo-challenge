@@ -3,7 +3,17 @@
 
 Usuario = lucas
 Contraseña= 1234
-Token = ced0f281226d8c169a7e7950910f402ebb102062
+##### Token =  los tokens se eliminan cuando se hace un /logout/ por url, logout por boton no los elimina, podes solicitar otro en postman POST: #####
+
+???????? = 
+
+http://127.0.0.1:8000/api_generate_token/
+
+username= lucas
+password= 1234
+
+o bien crearlas desde el admin
+
 
 \\\\\\\\\\\\\\\\\\\\\\\\\
 Los campos de los JSON 
@@ -15,7 +25,7 @@ representan informacion especificada del User, se realizaron con una función to
 \\\\\\\\\\\\\\\\\\\\\\\\\
 
 |Header          |Value
-|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+|Authorization	 |Token ????????
 
 \\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -47,7 +57,7 @@ Para ver todos los registros desde terminal con la libreria https(instalada en e
 O podemos hacerlo desde Postman, poniendo en los Headers 
 
 |Header          |Value
-|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+|Authorization	 |Token ????????
 
 y en la peticion
 
@@ -67,7 +77,7 @@ http://127.0.0.1:8000/api/userlist/
 ##### Post de archivos(Postman)
  
 |Header          |Value
-|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+|Authorization	 |Token ????????
 
 
 http://127.0.0.1:8000/api/tasks/  | METHOD= POST
@@ -117,7 +127,7 @@ y obtendriamos un JSON como este:
 
 
 |Header          |Value
-|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+|Authorization	 |Token ????????
 
 Pasamos la siguiente URL especificando la pk de la tarea, este caracter es siempre un int.
 
@@ -168,7 +178,7 @@ y obtendriamos un JSON como este:
 ##### DELETE de archivos(Postman)
 
 Header          |Value
-|Authorization	 |Token ced0f281226d8c169a7e7950910f402ebb102062
+|Authorization	 |Token ????????
 
 Pasamos la siguiente URL especificando la pk de la tarea, este caracter es siempre un int.
 
