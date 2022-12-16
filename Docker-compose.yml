@@ -1,0 +1,12 @@
+services:
+    api_todo:
+        build: ./
+        container_name: api_todo
+        ports:
+        - 8000:8000
+        networks:
+            - api_todo
+networks:
+  api_todo:
+    name: api_todo
+    driver: bridge
