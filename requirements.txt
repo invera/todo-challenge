@@ -1,0 +1,7 @@
+pytz==2021.1
+sqlparse==0.4.1
+psycopg2==2.7.4 --no-binary psycopg2
+django==2.2.16
+djangorestframework==3.12.4
+django-environ==0.4.5
+django-extensions==2.1.4
