@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:12.15-bullseye
+    restart: always
+    env_file:
+      - ./backend/.env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  web:
+    build: .
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/backend
+volumes:
+  postgres_data:
