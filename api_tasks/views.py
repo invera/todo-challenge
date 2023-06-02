@@ -41,7 +41,7 @@ class TasksViewSet(BaseView):
 
     @action(detail=False, methods=['get'], permission_classes=[IsAdminUser])
     def all(self, request):
-        """Method that gets all tasks. Admin users only!.
+        """Method that gets all tasks. Endpoint available only for admin!.
 
         Args:
             request (Request): request of type GET

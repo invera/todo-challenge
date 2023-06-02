@@ -9,6 +9,7 @@ class BaseView(ModelViewSet):
     queryset = Tasks.objects
     permission_classes = [IsAuthenticated]
     serializer_class = TasksSerializer
+    filter_backends = []
 
     def get_queryset(self):
         request = self.request.query_params.dict()
