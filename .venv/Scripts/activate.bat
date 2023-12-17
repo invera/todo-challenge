@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Leona\Desktop\exam\IT Technical Exam\todo-challenge\.venv
+set VIRTUAL_ENV=C:\Users\Lemel\Desktop\exam\todo-challenge\.venv
 
 if not defined PROMPT set PROMPT=$P$G
 
